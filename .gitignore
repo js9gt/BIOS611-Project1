@@ -1,2 +1,5 @@
 # History files
 .Rhistory
+
+# Our CSV file
+cirrhosis.csv
