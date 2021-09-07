@@ -1,5 +1,7 @@
 # BIOS-611-Project
 
+  The dataset can be found [here](https://www.kaggle.com/fedesoriano/cirrhosis-prediction-dataset) 
+  
   Primary biliary cirrhosis (PBC), now called primary biliary cholangitis, is a chronic disease in which bile backup in your liver can lead to irreversible scarring of liver tissue (cirrhosis). It is considered an autoimmune disease that researchers believe to be caused by a combination of environmental and genetic factors. Symptoms may include swollen ankles and feet (edema), abdominal fluid buildup from liver failure (ascites), enlarged liver (hepatomegaly), and spider veins among many others. 
 
 
