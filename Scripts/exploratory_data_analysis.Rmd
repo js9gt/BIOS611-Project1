@@ -1,0 +1,44 @@
+---
+title: "exploratory_data_analysis"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+#Packages needed
+```{r}
+library(readr)
+library(vtable)
+```
+
+#Read in data
+```{r}
+#Read in CSV file
+cirrhosis <- read_csv("/Users/janeshe/Desktop/611/Project_1/Data/cirrhosis.csv")
+
+head(cirrhosis)
+```
+
+
+## Disease stage & gender
+```{r}
+#Create a boxplot to view relationship between disease stage & gender
+library(ggplot2)
+
+ggplot(data = cirrhosis, aes(y = Stage, color = Sex, fill = Sex)) + geom_bar(position=position_dodge()) + coord_flip() + ggtitle("Bar Graph of Sex and Disease Stage") + geom_text(stat='count', aes(label=..count..), vjust=-2, hjust = 1, color = "black", position = position_dodge(0.9))
+```
+Right off the bat we can see that the number of female patients is overwhelmingly larger than the number of male patients. This is consistent with medical literature saying that PBC is more common in females than males. We can see similar trends in numbers, where our patient counts tend to increase as severity (stage) increases as well. However, our peaks occur at stage 3 for women, and stage 4 for men. 
+
+
+
+```{r}
+#View some summary statistics between males & females and their general data characteristics 
+st(cirrhosis, group = "Sex", group.long = FALSE)
+```
+
+From our table, there seems to be a large difference in the mean alkaline phosphatase levels between women (1958.84) and men (2172.95).
+
+Also large difference in mean copper levels women (90.208), men (154.278)
