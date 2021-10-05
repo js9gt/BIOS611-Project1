@@ -1,3 +1,5 @@
 FROM rocker/verse
+MAINTAINER Jane She <jane.she@unc.edu>
+RUN R -e "install.packages('ggplot')"
 
-Edit Dockerfile
+#Edit Dockerfile
