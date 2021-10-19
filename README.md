@@ -1,11 +1,13 @@
 # BIOS-611-Project
 
-  The dataset with variable descriptions and more context can be found [here](https://www.kaggle.com/fedesoriano/cirrhosis-prediction-dataset) 
+  The dataset with variable descriptions and more context can be found [here](https://www.kaggle.com/andrewsundberg/college-basketball-dataset) 
   
-  Primary biliary cirrhosis (PBC), now called primary biliary cholangitis, is a chronic disease in which bile backup in your liver can lead to irreversible scarring of liver tissue (cirrhosis). It is considered an autoimmune disease that researchers believe to be caused by a combination of environmental and genetic factors. Symptoms may include swollen ankles and feet (edema), abdominal fluid buildup from liver failure (ascites), enlarged liver (hepatomegaly), and spider veins among many others. 
-
-
-  There are several possible risk factors that could impact the severity and/or predisposition to a PBC diagnosis, one of which is patient sex. Because most of the patients who have PBC are women, it would be interesting to assess whether or not that holds true in our dataset, and whether severity of disease (stage) differs between genders as well. Mayo Clinic reports that PBC is most likely to occur in people 30-60 years old; while age in this case is a continuous variable, it would be interesting to create a categorical variable with various strata based on several age ranges. We could use these strata to compare differences in disease stages between various age groups. If we can establish a strong relationship between a patient’s age and their disease stage, it might provide more insight into different medical treatment options by acting as a predictor. Additionally, it could be interesting to look at whether the two different treatment options (D-penicillamine, placebo) have any impact on a patient’s disease stage or their albumin levels, as albumin levels correlate with liver failure. Similarly, it would be interesting to explore the relationship between treatment options and disease stage. It’s possible that the D-penicillamine treatment may be correlated with higher, or more severe stages of PBC. If this is the case, we would further need to explore possible relationships between the drug and the disease in order to ensure that patients are not given a treatment that is harmful to them.  
-
-
-  Exploring the relationships between variables and disease stage is a critical component of providing the best medical care for patients. Although PBC is a relatively uncommon disease, it can be quite difficult to diagnose. Severe PBC, indicated by higher disease stages, requires liver transplants which can be difficult to obtain due to the huge disparity between supply and demand. Have more information about a patient’s potential disease stage based on other risk factors has advantages such as seeking matches for liver donors earlier, registering for an organ transplant earlier, and allowing the organ transplant registry to have more accurate information about which patients are in need of transplants. 
+  Men's college basketball is a widely popular sport, especially at the Division 1 level and is broadcasted nationally for fans to watch. According to Cav's Corner, the UVA men's basketball team is one of the top revenue generators for the school. Since the UVA men's basketball team won the national championships in 2019, I am interested in looking at various game statistic and their influences on the number of games won by a team. 
+  
+  Teams who win more games may be more likely to generate a larger fan base, more revenue for the school, and may be more likely to be projected to win the March Madness tournament.
+  
+  Being able to analyze specific predictors may also give coaches guidance for focusing practices on important skills and areas that may be lacking. 
+  
+  The dataset includes D1 college basketball statistics from the 2013-2021 seasons. however, I will just be focusing on the 2019 NCAA D1 basketball season since that is both the year that UVA won the national championships and the last pre-COVID season. 
+  
+  The dataset was found on kaggle and was scraped from barttorvik.com, a famous college basketball website. 
