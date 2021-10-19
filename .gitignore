@@ -2,4 +2,8 @@
 .Rhistory
 
 # Our CSV file
-#cirrhosis.csv
+cbb19.csv
+
+#Files that come with our report
+report.log
+report.synctex.gz
