@@ -1,9 +1,11 @@
+library(ggplot2)
+library(tidyverse)
+library(gridExtra)
 
 ##Add source file reading in data
 source('Scripts/read_data.R')
 
 ##Create scatterplots between variables of interest
-library(ggplot2)
 
 ##Scatterplot between W & ADJOE (adjusted offensive efficiency)
 p1 <- ggplot(cbb, aes(x= W, y= ADJOE)) + geom_point()+xlab("Adjusted Offensive Efficiency (ADJOE)") +
@@ -44,5 +46,16 @@ p4
 ##Pairwise plot to view possible interactions
 png(filename="Figures/pairwise_interaction.png")
 pairs(~W + ADJOE + ADJDE + TOR + TORD + EFG_O, data = cbb)
+dev.off()
+
+
+##Create correlation table with only our variables of interest
+cor_dat <- cbb %>% select(W, ADJOE, ADJDE, EFG_O, TOR, TORD) %>% as.matrix()
+
+cor_matrix <- data.frame(cor(cor_dat))
+
+png(filename="Figures/correlation_matrix.png", height=200, width=1000)
+p<-tableGrob(cor_matrix)
+grid.arrange(p)
 dev.off()
 
