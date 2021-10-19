@@ -1,5 +1,11 @@
-cbb19.csv:
-	curl https://www.kaggle.com/andrewsundberg/college-basketball-dataset?select=cbb19.csv -o cbb.csv
+#Remove dataset, figures, reports generated
+clean:
+	rm -f cbb19.csv
+	rm -f Figures/*.png
+	rm -f report.pdf
 
+
+
+#File that Reads in data
 Read_file.Rmd: cbb19.csv
-	Rscript cbb19.csv Read_file.Rmd
+	Rscript cbb19.csv read_data.R
