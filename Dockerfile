@@ -1,5 +1,5 @@
 FROM rocker/verse
 MAINTAINER Jane She <jane.she@unc.edu>
-RUN R -e "install.packages('ggplot')"
+RUN R -e "install.packages(c('ggplot2', 'readr', 'tidyverse', 'gridExtra'))"
 
 #Edit Dockerfile
