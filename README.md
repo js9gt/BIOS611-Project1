@@ -4,6 +4,8 @@
   
   Men's college basketball is a widely popular sport, especially at the Division 1 level and is broadcasted nationally for fans to watch. According to Cav's Corner, the UVA men's basketball team is one of the top revenue generators for the school. Since the UVA men's basketball team won the national championships in 2019, I am interested in looking at various game statistics and their influences on the number of games won by a team. 
   
+![](Figures/bball_champ.jpeg)
+  
   Teams who win more games may be more likely to generate a larger fan base, more revenue for the school, and may be more likely to be projected to win the March Madness tournament.
   
   Being able to analyze specific predictors may also give coaches guidance for focusing practices on important skills and areas that may be lacking. 
