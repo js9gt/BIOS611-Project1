@@ -39,7 +39,21 @@ To run this project, you will need Docker and the ability to run Docker as your 
 Now, you should be able to access my files in my "Project_1" folder which contains all the files for this project.  
 
 
-#### Add makefile
+## Makefile
+
+The makefile will help build components of the report. To build figures, run in Rstudio terminal the command
+
+  > make Figures/<figurename>.png
+  
+For example, to create the correlation matrix figure, run in Rstudio terminal:
+  
+  > make Figures/correlation_matrix.png
+  
+To build the final report, run in Rstudio terminal:
+
+  > make report.pdf
+
+
 
 ## Running Shiny App
 
@@ -47,14 +61,17 @@ The shiny app allows exploration of the dataset used by conference, seed, and po
 
 After subsetting data to view it in a table, data may be exported in CSV, excel, or PDF form. Additionally, the data may be printed.
 
-Please start the Shiny app through the following code:
+Please start the Shiny app by running in Rstudio terminal:
 
-  > docker run -v `pwd`:/home/rstudio -e PASSWORD=$MYPWD -p 8787:8787 -p 8788:8788 -t shiny
+  > make shiny_app
 
-Then, using the Rstudio terminal, run:
+Rstudio terminal should then output with a website:
 
-  > PORT=8788 make shiny_app
-  
+"Listening on http://127.0.0.1:3823" for example. 
+
+To run the app, please copy and paste the output website into your browser. 
+
+
   
 
 
