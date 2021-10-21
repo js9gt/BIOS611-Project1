@@ -10,7 +10,14 @@ secret.sh
 #The README html file
 README.html
 
+#PNG & JPEG files
+Figures/*.png
+Figures/*.jpeg
+
 
 #Files that come with our report
 report.log
 report.synctex.gz
+
+#Rplots.pdf file
+Rplots.pdf
