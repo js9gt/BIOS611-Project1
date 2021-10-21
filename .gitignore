@@ -11,13 +11,19 @@ secret.sh
 README.html
 
 #PNG & JPEG files
-Figures/*.png
-Figures/*.jpeg
+Figures/W_EFGO.png
+Figures/W_TOR.png
+Figures/W_TORD.png
 
 
-#Files that come with our report
+
+#Files that come with our report & our report
 report.log
 report.synctex.gz
+report.pdf
+report.aux
 
 #Rplots.pdf file
 Rplots.pdf
+
+-t
