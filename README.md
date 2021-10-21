@@ -14,28 +14,31 @@
   
   The dataset was found on kaggle and was scraped from barttorvik.com, a famous college basketball website. 
   
-## Usage
-
-To run this project, you will need Docker and the ability to run Docker as your current user. Please begin by building the docker container based on rocker/verse and run the R studio server. Then, connect to the machine using port 8787
-
-  > docker build . -t project1-env
-  
-   > docker run -v `pwd`:/home/rstudio -p 8787:8787\
-      -e PASSWORD=mypassword -t project1-env
-
-The aliases.sh file will be used to work with the Docker file and help set up the git repository.
 
 ## Aliases
 Before we begin, you will need to create a local secret.sh file to define your password. This file should contain:
 
-`#!/bin/bash` 
+ `#!/bin/bash` 
+
 `export MYPWD=<yourdesiredpassword>`
 
 Once you have created your secret.sh file, run:
 
   > source aliases.sh
+ 
+ The aliases.sh file will be used to work with the Docker file and help set up the git repository. 
+
+## Usage
+
+To run this project, you will need Docker and the ability to run Docker as your current user. Please begin by building the docker container based on rocker/verse and run the R studio server. Then, connect to the machine using port 8787 by going to localhost:8787.
+
+  > docker build . -t project1-env
   
-  
+   > docker run -v $(pwd):/home/rstudio/Project_1 -p 8787:8787 -e PASSWORD=<MYPWD> -t project1-env
+
+Now, you should be able to access my files in my "Project_1" folder which contains all the files for this project.  
+
+
 #### Add makefile
 
 ## Running Shiny App
