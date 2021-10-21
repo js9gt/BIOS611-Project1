@@ -4,6 +4,10 @@
 # Our CSV file
 cbb19.csv
 
+#Our secret.sh file
+secret.sh
+
+
 #Files that come with our report
 report.log
 report.synctex.gz
