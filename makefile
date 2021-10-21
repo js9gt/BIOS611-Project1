@@ -23,3 +23,53 @@ cbb19.csv:\
 	Rscript read_data.R
 
 
+#Data needed for the figures
+Figures/correlation_matrix.png:\
+ EDA.R\
+ Scripts/read_data.R
+ cbb19.csv
+	Rscript EDA.R
+
+Figures/pairwise_interaction.png:\
+ EDA.R\
+ Scripts/read_data.R
+ cbb19.csv
+	Rscript EDA.R
+
+Figures/W_ADJOE.png:\
+ EDA.R\
+ Scripts/read_data.R
+ cbb19.csv
+	Rscript EDA.R
+
+
+Figures/W_EFGO.png:\
+ EDA.R\
+ Scripts/read_data.R
+ cbb19.csv
+	Rscript EDA.R
+
+Figures/W_TOR.png:\
+ EDA.R\
+ Scripts/read_data.R
+ cbb19.csv
+	Rscript EDA.R
+
+
+Figures/W_TORD.png:\
+ EDA.R\
+ Scripts/read_data.R
+ cbb19.csv
+	Rscript EDA.R
+
+
+#Shiny app build
+shiny_app:\
+ derived_data/s_app.csv\
+ Scripts/read_data.R
+ cbb19.csv
+ shiny_app.R
+	Rscript shiny_app.R ${PORT}
+
+
+
