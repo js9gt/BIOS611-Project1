@@ -23,4 +23,37 @@ To run this project, you will need Docker and the ability to run Docker as your 
    > docker run -v `pwd`:/home/rstudio -p 8787:8787\
       -e PASSWORD=mypassword -t project1-env
 
+The aliases.sh file will be used to work with the Docker file and help set up the git repository.
+
+## Aliases
+Before we begin, you will need to create a local secret.sh file to define your password. This file should contain:
+
+`#!/bin/bash` 
+`export MYPWD=<yourdesiredpassword>`
+
+Once you have created your secret.sh file, run:
+
+  > source aliases.sh
+  
+  
+#### Add makefile
+
+## Running Shiny App
+
+The shiny app allows exploration of the dataset used by conference, seed, and postseason. Individuals may want to specifically analyze data from certain conferences (ACC, B10, etc.), certain seeds (1-16), or certain postseason rounds (champions, R68, etc.)
+
+After subsetting data to view it in a table, data may be exported in CSV, excel, or PDF form. Additionally, the data may be printed.
+
+Please start the Shiny app through the following code:
+
+  > docker run -v `pwd`:/home/rstudio -e PASSWORD=$MYPWD -p 8787:8787 -p 8788:8788 -t shiny
+
+Then, using the Rstudio terminal, run:
+
+  > PORT=8788 make shiny_app
+  
+  
+
+
+
 
