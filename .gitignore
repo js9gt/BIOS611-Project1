@@ -7,6 +7,9 @@ cbb19.csv
 #Our secret.sh file
 secret.sh
 
+#The README html file
+README.html
+
 
 #Files that come with our report
 report.log
