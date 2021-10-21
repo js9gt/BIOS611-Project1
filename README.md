@@ -13,3 +13,14 @@
   The dataset includes D1 college basketball statistics from the 2013-2021 seasons. however, I will just be focusing on the 2019 NCAA D1 basketball season since that is both the year that UVA won the national championships and the last pre-COVID season. 
   
   The dataset was found on kaggle and was scraped from barttorvik.com, a famous college basketball website. 
+  
+## Usage
+
+To run this project, you will need Docker and the ability to run Docker as your current user. Please begin by building the docker container based on rocker/verse and run the R studio server. Then, connect to the machine using port 8787
+
+  > docker build . -t project1-env
+  
+   > docker run -v `pwd`:/home/rstudio -p 8787:8787\
+      -e PASSWORD=mypassword -t project1-env
+
+
