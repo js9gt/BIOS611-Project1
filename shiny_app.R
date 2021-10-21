@@ -1,5 +1,6 @@
 library(shiny)
 library(data.table)
+library(DT)
 
 source('Scripts/read_data.R')
 
