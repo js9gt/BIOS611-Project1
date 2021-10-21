@@ -69,7 +69,7 @@ shiny_app:\
  Scripts/read_data.R\
  cbb19.csv\
  shiny_app.R
-	Rscript shiny_app.R ${PORT}
+	Rscript shiny_app.R
 
 
 
