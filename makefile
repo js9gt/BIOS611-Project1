@@ -9,7 +9,8 @@ clean:
 	#rm -f Figures/*.jpeg
 	rm -f report.pdf
 	
-#Final report output
+	
+#Final report output ##############
 report.pdf:\
  report.tex\
  Figures/correlation_matrix.png\
@@ -20,12 +21,12 @@ report.pdf:\
  Figures/W_TORD.png
 	pdflatex report.tex
 	
-#Dataset needed for project & reading it in
+#Dataset needed for project & reading it in ############
 cbb19.csv:\
  Scripts/read_data.R
 	Rscript Scripts/read_data.R
 	
-#Data needed for the figures ################
+#Data needed for the figures
 Figures/correlation_matrix.png:\
  Scripts/read_data.R\
  cbb19.csv\
