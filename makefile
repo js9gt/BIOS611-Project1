@@ -18,7 +18,8 @@ report.pdf:\
  Figures/W_ADJOE.png\
  Figures/W_EFGO.png\
  Figures/W_TOR.png\
- Figures/W_TORD.png
+ Figures/W_TORD.png\
+ Figures/model_assumptions.png
 	pdflatex report.tex
 	
 #Dataset needed for project & reading it in ############
@@ -63,6 +64,13 @@ Figures/W_TORD.png:\
  cbb19.csv\
  Scripts/W_TORD.R
 	Rscript Scripts/W_TORD.R
+	
+Figures/model_assumptions.png:\
+ Scripts/read_data.R\
+ Scripts/model_build.R\
+ cbb19.csv\
+ Scripts/model_assump.R
+	Rscript Scripts/model_assump.R
 
 
 #Shiny app build
