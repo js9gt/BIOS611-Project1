@@ -4,6 +4,11 @@
 \usepackage[margin=0.75in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{indentfirst}
+\usepackage{amsmath,amssymb}
+
+\DeclareRobustCommand{\bbone}{\text{\usefont{U}{bbold}{m}{n}}}
+
+\DeclareMathOperator{\EX}{\mathbb{E}}% expected value
 
 
 \setlength{\parindent}{4em}
@@ -45,6 +50,18 @@ Additionally, I created a correlation matrix along with a graph of some pairwise
 \includegraphics[width=0.8\textwidth]{Figures/pairwise_interaction.png}\\
 
 
+\section{Analysis- Model Building}
 
+During model building, I started off using only a couple quantitative predictors that looked like they had the strongest linear relationships from the EDA to predict the number of games won. The three quantitative predictors I chose to use were ADJOE, ADJDE, and EFGO.
+
+Our first stage hypothesized model was: 
+
+$\mathbb{E}(Games Won) = \beta_{0} + \beta_{1}(ADJOE) + \beta_{2}(ADJDE) + \beta_{3}(EFGO)$ 
+
+After conducting an F-test, we returned an F test statistic of 263.14 with a significant p-value. Meaning, this first model is adequate for predicting the number of games won. 
+
+Next, I added some qualitative predictors by turning the variable, WAB $(wins-above-bubble)$ into levels by certain bins. ###### Add in description for WAB
+
+These bins were: 
 
 \end{document}
