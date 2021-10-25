@@ -26,6 +26,7 @@ report.log
 report.synctex.gz
 report.pdf
 report.aux
+report.out
 
 #Rplots.pdf file
 Rplots.pdf
