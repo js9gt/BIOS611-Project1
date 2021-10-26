@@ -2,6 +2,11 @@ library(shiny)
 library(data.table)
 library(DT)
 
+
+args <- commandArgs(trailingOnly=T)
+port <- as.numeric(args[[1]])
+
+
 source('Scripts/read_data.R')
 
 #Replace NA seeds with "none"
@@ -64,5 +69,6 @@ server <- function(input, output) {
 
 # Run the application 
 #shinyApp(ui = ui, server = server)
-runApp(shinyobject<-shinyApp(ui = ui, server = server), launch.browser=T)
+shinyApp(ui = ui, server = server, options = list(port=port,
+                                                  host="0.0.0.0"))
 
