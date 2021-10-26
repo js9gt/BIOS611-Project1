@@ -35,10 +35,11 @@ To run this project, you will need Docker and the ability to run Docker as your 
 
  `docker build . -t project1-env` 
  
- `docker run -v $(pwd):/home/rstudio -p 8787:8787 -e PASSWORD=<MYPWD> -t project1-env>`
+ `docker run -v $(pwd):/home/rstudio -p 8787:8787 -e PASSWORD=<MYPWD> -t project1-env`
 
 
-Then, connect to the machine using port 8787 by going to localhost:8787.
+Then, connect to the machine using port 8787 by going to [http://localhost:8787/].
+
 Now, you should be able to access my files in my folder which contains all the files for this project.  
 
 
@@ -46,16 +47,15 @@ Now, you should be able to access my files in my folder which contains all the f
 
 The makefile will help build components of the report. To build figures, run in Rstudio terminal the command
 
-  > make Figures/<figurename>.png
+ `make Figures/<figurename>.png`
   
 For example, to create the correlation matrix figure, run in Rstudio terminal:
   
-  > make Figures/correlation_matrix.png
+ `make Figures/correlation_matrix.png`
   
 To build the final report, run in Rstudio terminal:
 
-  > make report.pdf
-
+ `make report.pdf`
 
 
 ## Running Shiny App
@@ -64,15 +64,20 @@ The shiny app allows exploration of the dataset used by conference, seed, and po
 
 After subsetting data to view it in a table, data may be exported in CSV, excel, or PDF form. Additionally, the data may be printed.
 
-Please start the Shiny app by running in Rstudio terminal:
+Please start the Shiny app by first launching docker:
 
-  > make shiny_app
 
-Rstudio terminal should then output with a website:
+ `docker run -v $(pwd):/home/rstudio -e PASSWORD=<MYPWD> -p 8787:8787 -p 8788:8788 -t project1-env`
 
-"Listening on http://127.0.0.1:3823" for example. 
+Then, go to [http://localhost:8787/]
 
-To run the app, please copy and paste the output website into your browser. 
+Finally, use Rstudio terminal in the server and enter 
+
+ `make shiny_app`
+
+Rstudio terminal should then output with a website.
+
+To run the app, please click the website link. 
 
 
   
