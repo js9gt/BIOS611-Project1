@@ -30,12 +30,15 @@ Once you have created your secret.sh file, run:
 
 ## Usage
 
-To run this project, you will need Docker and the ability to run Docker as your current user. Please begin by building the docker container based on rocker/verse and run the R studio server. Then, connect to the machine using port 8787 by going to localhost:8787.
+To run this project, you will need Docker and the ability to run Docker as your current user. Please begin by building the docker container based on rocker/verse and run the R studio server. 
 
-  > docker build . -t project1-env
-  
-   > docker run -v $(pwd):/home/rstudio -p 8787:8787 -e PASSWORD=<MYPWD> -t project1-env
 
+ `docker build . -t project1-env` 
+ 
+ `docker run -v $(pwd):/home/rstudio -p 8787:8787 -e PASSWORD=<MYPWD> -t project1-env>`
+
+
+Then, connect to the machine using port 8787 by going to localhost:8787.
 Now, you should be able to access my files in my folder which contains all the files for this project.  
 
 
