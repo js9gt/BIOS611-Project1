@@ -4,7 +4,7 @@ SHELL: /bin/bash
 
 #Remove dataset, figures, reports generated
 clean:
-	#rm -f cbb19.csv
+	#rm -f cbb19.csv (I can't figure out how to download directly from kaggle)
 	rm -f Figures/*.png
 	#rm -f Figures/*.jpeg
 	rm -f report.pdf
@@ -79,7 +79,7 @@ shiny_app:\
  Scripts/read_data.R\
  cbb19.csv\
  shiny_app.R
-	Rscript shiny_app.R
+	Rscript shiny_app.R ${PORT}
 
 
 
