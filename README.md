@@ -34,9 +34,9 @@ To run this project, you will need Docker and the ability to run Docker as your 
 
   > docker build . -t project1-env
   
-   > docker run -v $(pwd):/home/rstudio/Project_1 -p 8787:8787 -e PASSWORD=<MYPWD> -t project1-env
+   > docker run -v $(pwd):/home/rstudio -p 8787:8787 -e PASSWORD=<MYPWD> -t project1-env
 
-Now, you should be able to access my files in my "Project_1" folder which contains all the files for this project.  
+Now, you should be able to access my files in my folder which contains all the files for this project.  
 
 
 ## Makefile
