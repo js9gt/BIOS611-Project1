@@ -38,7 +38,12 @@ To run this project, you will need Docker and the ability to run Docker as your 
  `docker run -v $(pwd):/home/rstudio -p 8787:8787 -e PASSWORD=<MYPWD> -t project1-env`
 
 
-Then, connect to the machine using port 8787 by going to [http://localhost:8787/].
+Then, connect to the machine using port 8787 by going to [http://localhost:8787/](http://localhost:8787/). The username and password will be as following:
+
+ `Username: rstudio` 
+ 
+ `Password: MYPWD (the one you set earlier)`
+
 
 Now, you should be able to access my files in my folder which contains all the files for this project.  
 
@@ -69,7 +74,7 @@ Please start the Shiny app by first launching docker:
 
  `docker run -v $(pwd):/home/rstudio -e PASSWORD=<MYPWD> -p 8787:8787 -p 8788:8788 -t project1-env`
 
-Then, go to [http://localhost:8787/]
+Then, go to [http://localhost:8787/](http://localhost:8787/). 
 
 Finally, use Rstudio terminal in the server and enter 
 
