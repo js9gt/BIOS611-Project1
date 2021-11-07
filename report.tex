@@ -75,7 +75,7 @@ The bubble refers to the cut-off between making the NCAA March Madness Tournamen
 
 These bins along with their dummy coding were:
 
-Base level: -23.2:-16:48
+Base level: -23.2:-16.48
 
 X1: x1 = 1 if [-16.48, -9.56), x1 = 0 if not
 
@@ -138,5 +138,57 @@ We can also see that we have several influential observations with a couple of o
 \includegraphics[width=0.8\textwidth]{Figures/model_assumptions.png}\\
 
 
+\section{Model Comparison}
+
+I performed Ridge and Lasso regression which are both shrinkage methods to assess if there was a better way to create a model. For both, the data was randomly split in a "test" and "training" group. The model was fit on the "training" group using cross validation to pick the optimal model. Model performance was then evaluated on the "test" group by comparing the mean square error $(MSE)$ and adjusted $R^2$.
+
+\begin{itemize}
+  \item Multiple Linear Regression Final Model:
+      \begin{itemize}
+        \item MSE: 8.72
+        \item Adjusted $R^2$: 0.778
+      \end{itemize}
+
+  \item Ridge Regression Final Model:
+      \begin{itemize}
+        \item MSE: 9.38
+        \item Adjusted $R^2$: 0.758
+      \end{itemize}
+  \item Lasso Regression Final Model:
+      \begin{itemize}
+        \item MSE: 10.03
+        \item Adjusted $R^2$: 0.747
+      \end{itemize}
+\end{itemize}
+
+Since our Multiple Linear Regression model had both the lowest mean squared error $(MSE)$ and the highest adjusted $R^2$, it gives us the best model which is as follows (rounded to two decimal places):
+
+$\mathbb{E}(Games Won) = -35.33 + 0.31(ADJOE) - 0.097(ADJDE) + 0.53(EFGO) + 33.73(x1) + 51.31(x2) + 59.16(x3) + 27.88(x4) - 0.32(ADJOE*x1) - 0.44(ADJOE * x2) - 0.47(ADJOE * x3) - 0.16(ADJOE *x4)$ 
+
+    where the following dummy variables represent "wins above bubble" (WAB):
+  
+    \begin{itemize}
+          \item Base level: -23.2 $\leq$ WAB $<$ 16.48
+          \item x1 = 1 if -16.48 $\leq$ WAB $<$ -9.56 and x1 = 0 otherwise
+          \item x2 = 1 if -9.56 $\leq$ WAB $<$ -2.64 and x2 = 0 otherwise
+          \item x3 = 1 if -2.64 $\leq$ WAB $<$ 4.28 and x3 = 0 otherwise
+          \item x4 = 1 if 4.28 $\leq$ WAB $<$ 11.2 and x4 = 0 otherwise
+    \end{itemize}
+
+
+
+\section{Model Interpretation}
+
+Using UVA as an example in the 2019 season, the team had an ADJOE of 123, ADJDE of 89.9, EFGO of 55.2, and a WAB of 11.1. Using the above model, we then get the following equation for predicting how many games the team would win: x4 = 1
+
+$\mathbb{E}(Games Won) = -35.33 + 0.31(123) - 0.097(89.9) + 0.53(55.2) + 33.73(0) + 51.31(0) + 59.16(0) + 27.88(1) - 0.32(0) - 0.44(0) - 0.47(0) - 0.16(123 *1)$ 
+
+$ = 31.5357 \approx 32$ games
+
+Since UVA actually won 35 games in the 2019 season, our residual is 3 games. 
+
+An MSE of 8.72 shows that the average of the squares of the errors for the regression model is relatively low. The Adjusted $R^2$ of 0.778 means that $77.8\%$ of the variance in the games won by NCAA D1 teams in the 2019 season can be explained by the model.
+
+To further improve our model, we could look at more variables to include that aren't in our dataset. Some interesting ones could be the number of times a team's coach has appeared in the NCAA finals, the average number of fouls commited per game by a team, and the average number of fouls commited against a team per game.
 
 \end{document}
